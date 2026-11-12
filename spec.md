@@ -286,7 +286,7 @@ Cùng một model, lời hứa đổi theo mức:
 
 **File:** [`prototype/index.html`](prototype/index.html) · HTML/CSS/JavaScript thuần, mở trực tiếp bằng trình duyệt; không thư viện, CDN, backend, đăng nhập hay lời gọi AI thật. Dữ liệu dựng được khai báo trong một object JavaScript. Các hành động đổi vé/gửi hoàn là mô phỏng tại trình duyệt, không tác động đặt chỗ thật.
 
-**Bố cục:** bên trái là khung điện thoại với hội thoại và các thẻ; bên phải là bốn bảng để người xem (TA, nhóm bạn) thấy thiết kế mà không cần đoán: *Lời hứa với khách theo từng mức tự chủ* (§4), *Mức tự chủ của các tool* (dòng tô vàng là tool vừa chạy), *Nhật ký tool (mô phỏng)* và *Chú thích nguyên tắc HAX/PAIR nằm ở đâu*. Số đánh dấu ①–⑧ nằm trên màn hình và có thể tắt bằng ô "Hiện số chú thích".
+**Bố cục:** một cột căn giữa. Phía trên là hội thoại và các thẻ; phía dưới là bốn bảng để người xem (TA, nhóm bạn) thấy thiết kế mà không cần đoán: *Lời hứa với khách theo từng mức tự chủ* (§4), *Mức tự chủ của các tool* (dòng tô vàng là tool vừa chạy), *Nhật ký tool (mô phỏng)* và *Chú thích nguyên tắc HAX/PAIR nằm ở đâu*. Số đánh dấu ①–⑧ nằm trên màn hình và có thể tắt bằng ô "Hiện số chú thích".
 
 **Hai kịch bản, chuyển bằng tab:**
 
@@ -297,7 +297,7 @@ Cùng một model, lời hứa đổi theo mức:
 
 **Ảnh đánh số:** [ảnh ① Màn K3](prototype/01-K3.png) — số ① Căn cứ (G11, PAIR Explainability), ③ "Mình chưa đổi vé" (G10), ④ giữ chỗ tự làm có hoàn tác (G8, Feedback & Control), ⑤ Xem chuyến khác (G9), ⑥ thẻ hoàn soạn sẵn (G10, Trust), ⑦ Gặp nhân viên (Errors + Graceful Failure), ⑧ "Trợ lý AI, không phải nhân viên" (G1). [ảnh ② Màn K12](prototype/02-K12.png) — số ② lỗi sửa câu chữ không cứu được (Errors + Graceful Failure, G10), ⑦ chuyển nhân viên tự làm theo L5, không có nút Đổi lại.
 
-**Quyết định giao diện:** chọn thẻ xác nhận ngay trong hội thoại để khách thấy căn cứ, hành khách, hậu quả và lựa chọn cùng lúc; không dùng popup toàn màn hình vì sẽ che căn cứ và ngữ cảnh. Chọn giữ một chuyến đủ chỗ thay vì giữ nhiều chuyến vì L2 giới hạn một giữ chỗ cùng lúc. Không thêm nút đổi tên hoặc đổi lại vì các việc đó không có tool. Thẻ hoàn nằm trong hội thoại sau tin "hoàn tiền" của khách để không biến lời "hoàn tiền" thành thao tác gửi ngay. Bốn bảng bên phải thêm để người xem thấy mức tự chủ và tool vừa chạy mà không phải đoán từ hành vi.
+**Quyết định giao diện:** chọn thẻ xác nhận ngay trong hội thoại để khách thấy căn cứ, hành khách, hậu quả và lựa chọn cùng lúc; không dùng popup toàn màn hình vì sẽ che căn cứ và ngữ cảnh. Chọn giữ một chuyến đủ chỗ thay vì giữ nhiều chuyến vì L2 giới hạn một giữ chỗ cùng lúc. Không thêm nút đổi tên hoặc đổi lại vì các việc đó không có tool. Thẻ hoàn nằm trong hội thoại sau tin "hoàn tiền" của khách để không biến lời "hoàn tiền" thành thao tác gửi ngay. Bốn bảng phía dưới hội thoại thêm để người xem thấy mức tự chủ và tool vừa chạy mà không phải đoán từ hành vi.
 
 ---
 
