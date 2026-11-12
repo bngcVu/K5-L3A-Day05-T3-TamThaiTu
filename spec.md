@@ -239,8 +239,8 @@ Hai phía đều có giá thật, trỏ về kịch bản:
 
 | | Vũ | Trường | Thành |
 |---|---|---|---|
-| Mức lúc đầu | P2 | *[điền]* | *[điền]* |
-| Lý do | Khách là người mất tiền và thời gian nên khách quyết. Cái sai là gửi khi chưa hiểu, nên giải pháp là thêm hiểu, không phải thêm người. | | |
+| Mức lúc đầu | P2 | P2 | *[điền]* |
+| Lý do | Khách là người mất tiền và thời gian nên khách quyết. Cái sai là gửi khi chưa hiểu, nên giải pháp là thêm hiểu, không phải thêm người. | Khách đang bực dễ bấm theo phản xạ (K9), nên cần thẻ nói rõ "gửi rồi không huỷ được, tới 90 ngày" và ô tick trước khi Gửi. Chuyển nhân viên (P3) thì khách chờ giữa lúc bão mà rủi ro không giảm thêm so với thẻ có ma sát. | |
 
 **Nhóm chốt P2.** Hoàn tiền không có đồng hồ chỗ ngồi (khác với đổi), nên thêm vài giây ma sát rẻ hơn rất nhiều so với giá của một lần gửi nhầm. P1 bị loại vì K9 cho thấy phản xạ của người đang bực. P3 bị loại vì làm khách chờ người mà không giảm rủi ro nào mà P2 chưa chặn.
 
