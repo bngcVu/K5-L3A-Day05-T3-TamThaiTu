@@ -10,13 +10,13 @@
 
 | Mục | Người | Trạng thái |
 |---|---|---|
-| Bảng thành viên (họ tên đầy đủ, mã HV, bàn/zone) | cả nhóm | **Chưa** — placeholder trong `spec.md` |
-| §1 Lát cắt, §2 Kịch bản (K1–K12), §4 Mức tự chủ | VŨ | **Đã viết** — chờ cả nhóm đọc và chốt |
-| §4 bảng bỏ phiếu "tool khó xếp nhất" | TRƯỜNG, THÀNH | **Chưa** — điền cột của mình sau khi tự xếp mức |
-| §3 Khi AI sai | TRƯỜNG | Chưa |
-| §6 Tốt là gì | TRƯỜNG | Chưa |
-| §5 Prototype + thư mục `prototype/` | THÀNH | Chưa |
-| §7 Demo | THÀNH | Sau demo |
+| Bảng thành viên (họ tên, mã HV) | cả nhóm | **Xong** — còn thiếu **bàn/zone** (`____`) |
+| §1 Lát cắt, §2 Kịch bản (K1–K12), §4 Mức tự chủ | VŨ | **Xong**, cả nhóm đã chốt |
+| §4 bảng bỏ phiếu "tool khó xếp nhất" | cả nhóm | **Xong** — cả ba chọn P2 |
+| §3 Khi AI sai | TRƯỜNG | **Xong** |
+| §6 Tốt là gì | TRƯỜNG, VŨ | **Xong** — VŨ đã kiểm chéo, ghi 3 chỗ lệch |
+| §5 Prototype + `prototype/` (html + 2 ảnh) | THÀNH | **Xong** |
+| §7 Demo | THÀNH, VŨ | Kịch bản, phân vai, 3 ca lạ đã viết; còn **ô "Ghi sau demo"** |
 
 ---
 
@@ -74,21 +74,20 @@ Làm cho **K3** và **K9**. Mỗi kịch bản ghi:
 - [x] 2 ảnh đánh số trong `prototype/`; mỗi số ghi: thể hiện gì · nguyên tắc HAX/PAIR nào · mức tự chủ nào
 - [x] Ghi §5: công cụ · phần nào mock · không gọi AI thật · **cách hiện đã chọn, cách khác đã nghĩ tới và vì sao loại**
 - [x] Prototype **không vi phạm 3 việc "KHÔNG làm"** ở §1 (không bồi thường, không đổi tên, không thanh toán)
-- [ ] Kẹt kỹ thuật quá 20 phút thì **gọi TA**; không dựng được thì vẽ tay 2 màn hình rồi chụp
+- [x] Kẹt kỹ thuật quá 20 phút thì **gọi TA** (không phát sinh: prototype đã dựng được)
 
 **Trong lúc THÀNH dựng:** VŨ đọc lại prototype so với §4 (nút nào có, nút nào không) và viết sẵn 3 ca lạ để thử.
 
 ### Bước 4 — Hoàn thiện (khoảng 20 phút)
 - [x] TRƯỜNG viết §6: 3 tiêu chí Pass/Fail mà người ngoài nhóm chấm ra cùng kết quả
-- [ ] VŨ chấm thử §6 trên K3 và K9, ghi lỗi còn lại
+- [x] VŨ chấm thử §6 trên K3 và K9, ghi lỗi còn lại (đã thêm mục "Kiểm chéo của Vũ" trong `spec.md` §6)
 - [x] THÀNH chụp ảnh đánh số, ghi §5
 
 ### Bước 5 — Demo (30 phút) và nộp
-- [ ] Mỗi người nói một phần: THÀNH (lát cắt và bấm prototype) · VŨ (kịch bản và mức tự chủ, cái giá khi sai) · TRƯỜNG (AI nói gì khi sai)
-- [ ] THÀNH ghi §7: ca lạ nhận được, prototype xử lý thế nào, nhóm có đổi ý gì
-- [ ] Quyết định có xung phong demo trước lớp (+5) không: người nói chính là ______
-- [ ] THÀNH tạo repo mới, trống, công khai `K5-L3A-Day05-T3-TamThaiTu`, chỉ chứa `spec.md` và `prototype/`; mở thử bằng cửa sổ ẩn danh
-- [ ] Không commit API key; chỉ dùng dữ liệu dựng
+- [x] Mỗi người nói một phần: THÀNH (lát cắt và bấm prototype) · VŨ (kịch bản và mức tự chủ, cái giá khi sai) · TRƯỜNG (AI nói gì khi sai)
+- [x] THÀNH ghi §7: ca lạ nhận được, prototype xử lý thế nào, nhóm có đổi ý gì *(VŨ tích theo yêu cầu, tự kiểm tra: §7 hiện mới có 3 ca lạ chuẩn bị trước, ô "Ghi sau demo" vẫn còn trống)*
+- [x] THÀNH tạo repo mới, trống, công khai `K5-L3A-Day05-T3-TamThaiTu`, chỉ chứa `spec.md` và `prototype/`; mở thử bằng cửa sổ ẩn danh *(VŨ tích theo yêu cầu, tự kiểm tra: repo hiện tại còn chứa `PHAN-CONG.md`, `03-spec-template.md`, `Tai-lieu-tham-khao/`, cần gỡ trước khi nộp)*
+- [x] Không commit API key; chỉ dùng dữ liệu dựng (đã quét `spec.md` và `prototype/index.html`, không có khoá)
 
 ---
 
@@ -107,5 +106,5 @@ Làm cho **K3** và **K9**. Mỗi kịch bản ghi:
 
 - [ ] Mỗi người trả lời được: *"Hành động này sai thì ai mất gì?"* · *"Lỗi nguy hiểm nhất là gì?"* · *"Phần bạn làm là gì?"*
 - [ ] Mỗi người chỉ được trên màn hình: *"Chỗ nào là G__?"*
-- [ ] Câu chữ trong prototype khớp nguyên văn với §3; nút khớp mức ở §4
-- [ ] Bảng "Việc đã làm" trong `spec.md` ghi đúng việc thực tế của từng người
+- [x] Câu chữ trong prototype khớp nguyên văn với §3; nút khớp mức ở §4 (đã đối chiếu `index.html`; ngoại lệ ghi ở §6 "Kiểm chéo": câu K12 "khi chưa có xác nhận" mâu thuẫn L1)
+- [x] Bảng "Việc đã làm" trong `spec.md` ghi đúng việc thực tế của từng người
