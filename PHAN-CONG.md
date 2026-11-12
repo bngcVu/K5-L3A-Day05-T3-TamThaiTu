@@ -36,8 +36,10 @@ Mỗi phần có **một người viết, một người đọc lại**. Ai cũn
 
 ### Bước 1 — Cả nhóm (15 phút)
 - [x] TRƯỜNG, THÀNH đọc `spec.md` §2 và §4. Chỗ nào không đồng ý thì sửa ngay.
-- [ ] Xác nhận 2 kịch bản đắt nhất (**K3, K9**) và mức tự chủ cho 5 tool.
-- [ ] Mỗi người tự xếp mức cho `gui_yeu_cau_hoan_ve` (5 phút, không bàn), rồi **điền cột của mình** vào bảng bỏ phiếu §4. Nếu kết quả khác P2 thì VŨ sửa phần "nhóm chốt".
+- [x] THÀNH xác nhận 2 kịch bản đắt nhất (**K3, K9**) và mức tự chủ trong §4: `tra_cuu_dat_cho` tự làm · `giu_cho_chuyen_moi` tự làm có điều kiện L2 · `doi_chuyen_bay` khách duyệt · `gui_yeu_cau_hoan_ve` khách duyệt có ma sát P2 · `chuyen_nhan_vien` tự làm.
+- [ ] TRƯỜNG xác nhận K3/K9 và mức tự chủ để hoàn tất xác nhận của cả nhóm.
+- [x] THÀNH tự xếp `gui_yeu_cau_hoan_ve` mức **P2** và điền cột của mình vào bảng bỏ phiếu §4.
+- [ ] TRƯỜNG tự xếp mức và điền cột của mình; nếu kết quả khác P2 thì VŨ sửa phần "nhóm chốt".
 - [x] Điền họ tên đầy đủ của 3 thành viên vào đầu `spec.md`
 - [ ] Kiểm lại **mã học viên** của Trường (`2A2026034` chỉ có 9 ký tự, hai bạn kia có 11) — **phải đúng**
 - [ ] Điền bàn/zone (hiện còn `____`)

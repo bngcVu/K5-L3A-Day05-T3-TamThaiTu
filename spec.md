@@ -155,12 +155,12 @@ Hai phía đều có giá thật, trỏ về kịch bản:
 
 | | Vũ | Trường | Thành |
 |---|---|---|---|
-| Mức lúc đầu | P2 | *[điền]* | *[điền]* |
-| Lý do | Khách là người mất tiền và thời gian nên khách quyết. Cái sai là gửi khi chưa hiểu, nên giải pháp là thêm hiểu, không phải thêm người. | | |
+| Mức lúc đầu | P2 | *[điền]* | P2 |
+| Lý do | Khách là người mất tiền và thời gian nên khách quyết. Cái sai là gửi khi chưa hiểu, nên giải pháp là thêm hiểu, không phải thêm người. | | K9: tick xác nhận buộc khách thấy rõ yêu cầu hoàn không thể huỷ; thẻ soạn không tự gửi. Hoàn tiền không có đồng hồ giữ chỗ nên vài lần bấm thêm ít gây hại hơn gửi nhầm. Không chọn P3 vì khách là người quyết định, không cần chờ nhân viên. |
 
 **Nhóm chốt P2.** Hoàn tiền không có đồng hồ chỗ ngồi (khác với đổi), nên thêm vài giây ma sát rẻ hơn rất nhiều so với giá của một lần gửi nhầm. P1 bị loại vì K9 cho thấy phản xạ của người đang bực. P3 bị loại vì làm khách chờ người mà không giảm rủi ro nào mà P2 chưa chặn.
 
-> *Điểm cần điền sau vòng bỏ phiếu:* cột Trường và Thành, và sửa phần "nhóm chốt" nếu kết quả khác P2.
+> *Điểm cần điền sau vòng bỏ phiếu:* cột Trường; sửa phần "nhóm chốt" nếu kết quả khác P2.
 
 ### Thử mức đã đặt trên 3 kịch bản
 
