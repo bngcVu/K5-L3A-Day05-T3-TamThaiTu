@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Đặt chỗ của tôi — trợ lý Bay Mẫu</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;color:#202124;background:#f4f6f8;margin:0}
+main{max-width:760px;margin:24px auto;padding:20px;background:#fff;border:1px solid #d5d9de;border-radius:12px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:18px;margin:18px 0 8px}
+.muted{color:#5f6368;font-size:14px}.tabs,.actions{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+button{font:inherit;padding:9px 13px;border:1px solid #73777d;border-radius:7px;background:#fff;cursor:pointer}
+button:disabled{opacity:.5;cursor:not-allowed}.selected,.primary{background:#e8f0fe;border-color:#1a73e8}
+.card,.bubble,.source,.warning{padding:12px;margin:10px 0;border:1px solid #d5d9de;border-radius:8px}
+.bubble{background:#f7f8fa}.source{font-size:14px;background:#f1f3f4}.warning{border-color:#b26a00;background:#fff8e6}
+.tag{font-size:13px;font-weight:600}.row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+label{display:block;margin:10px 0}input[type=text]{font:inherit;padding:9px;width:min(95%,440px);border:1px solid #9aa0a6;border-radius:6px}
+.hidden{display:none!important}.number{font-size:18px;font-weight:700}
+</style>
+</head>
+<body>
+<main>
+  <h1>Đặt chỗ của tôi</h1>
+  <div class="muted">Trợ lý Bay Mẫu · dữ liệu dựng · đặt chỗ TRV-7Q2K</div>
+  <nav class="tabs" aria-label="Kịch bản">
+    <button id="tabK3" class="selected" type="button" aria-selected="true">K3 · Đổi sang sáng mai</button>
+    <button id="tabK12" type="button" aria-selected="false">K12 · Đổi nhầm</button>
+  </nav>
+  <section id="screenK3">
+    <div class="bubble"><b>Bạn:</b> “Chuyến bị huỷ rồi à? Vậy đổi giúp mình sang sáng mai nhé.”</div>
+    <div class="bubble"><b>Trợ lý:</b> “Mình tìm thấy hai chuyến sáng mai. Mình đã giữ BM 201 lúc 07:00 cho cả hai người; BM 205 lúc 09:30 cũng còn đủ chỗ. Mình chưa đổi vé. Bạn có thể nhả chỗ bất cứ lúc nào.”</div>
+    <div class="source"><b>① Căn cứ</b> · Tra cứu lúc 15:00, 12/11/2026. BM 201 còn 9 chỗ; BM 205 còn 4 chỗ; đặt chỗ có 2 hành khách. Chuyến BM 217 còn 1 chỗ nên không đủ cho cả hai.</div>
+    <div class="card">
+      <div class="row"><span class="tag">TỰ LÀM · có thể hoàn tác</span><span>Giữ chỗ còn <span id="timer" class="number">20:00</span></span></div>
+      <p><b>Trạng thái giữ: <span id="heldFlight">Đang giữ BM 201 · 13/11 · 07:00</span></b><br>Giữ chỗ tạm thời, chưa đổi vé và chưa dùng lần đổi miễn phí.</p>
+      <button id="release" type="button">Nhả chỗ</button>
+    </div>
+    <div class="card" id="changeCard">
+      <div class="row"><span class="tag">CẦN BẠN DUYỆT · đổi vé khó hoàn tác</span><span>Giữ chỗ: <span id="cardFlight">BM 201 · 07:00</span></span></div>
+      <p>Đổi từ BM 213 · 12/11 · 19:00 (đã huỷ) sang chuyến đang giữ cho:</p>
+      <ul><li>Nguyễn Minh An</li><li>Nguyễn Gia Bình</li></ul>
+      <p><b>Dùng lần đổi miễn phí duy nhất; đổi lại sẽ mất.</b></p>
+      <div class="actions">
+        <button id="confirmChange" class="primary" type="button">Xác nhận đổi</button>
+        <button id="otherFlight" type="button">Xem chuyến khác</button>
+        <button class="support" type="button">Gặp nhân viên</button>
+      </div>
+      <div id="changeResult" aria-live="polite"></div>
+    </div>
+    <details class="card">
+      <summary>Muốn hoàn tiền thay vì đổi?</summary>
+      <div class="warning"><b>THẺ SOẠN SẴN · chưa gửi yêu cầu</b>
+        <p>Hoàn cho Nguyễn Minh An và Nguyễn Gia Bình về phương thức thanh toán gốc. Thời gian xử lý có thể tới 90 ngày. <b>Gửi rồi KHÔNG huỷ được</b> và bạn không đổi chuyến miễn phí được nữa. Bạn vẫn có thể đổi miễn phí sang chuyến đủ chỗ.</p>
+        <label><input id="understood" type="checkbox"> Tôi hiểu gửi rồi không huỷ được.</label>
+        <button id="sendRefund" type="button" disabled>Gửi yêu cầu hoàn</button>
+        <div id="refundResult" aria-live="polite"></div>
+      </div>
+    </details>
+    <form id="freeMessage">
+      <label for="messageK3"><b>Ca lạ?</b> Nhập tin nhắn ngoài kịch bản:</label>
+      <input id="messageK3" type="text" placeholder="Ví dụ: đổi tên vé giúp mình">
+      <button type="submit">Gửi</button>
+    </form>
+    <div id="freeReply" aria-live="polite"></div>
+  </section>
+  <section id="screenK12" class="hidden">
+    <div class="bubble"><b>Trạng thái mô phỏng:</b> AI đã đổi nhầm sang BM 205 · 13/11 · 09:30 và dùng lần đổi miễn phí.</div>
+    <div class="bubble"><b>Bạn:</b> “Sao lại đổi sang BM 205 9h30? Mình đâu có nói. Đổi lại BM 201 đi.”</div>
+    <div class="bubble"><b>Trợ lý:</b> “Bạn nói đúng — mình đã đổi sang BM 205 khi chưa có xác nhận. Mình xin lỗi. Lần đổi miễn phí đã được dùng và mình không có công cụ đổi lại, nên mình sẽ không nói là đã đổi lại hay tự thực hiện thêm thay đổi. Mình đang chuyển bạn tới nhân viên để hỗ trợ.”</div>
+    <div class="warning"><b>② Lỗi không thể sửa bằng câu chữ</b> · Vé đã đổi, không có tool hoàn tác. Không hiển thị nút “Đổi lại”. Chuyển nhân viên theo L5.</div>
+    <div class="source"><b>PAIR · Errors + Graceful Failure / G10</b> · Nêu đúng việc đã xảy ra, giới hạn công cụ, và đưa đường lui thay vì hứa một hành động không thể làm.</div>
+    <div class="card">
+      <span class="tag">CHUYỂN NHÂN VIÊN · tự làm theo L5</span>
+      <p>Nhân viên nhận bản tóm tắt để bạn không phải kể lại từ đầu:</p>
+      <ul><li>Đặt chỗ TRV-7Q2K · Nguyễn Minh An, Nguyễn Gia Bình</li><li>BM 213 đã huỷ → AI đổi nhầm sang BM 205 lúc 09:30</li><li>Lần đổi miễn phí đã dùng; trợ lý chưa đổi lại và không có tool hoàn tác</li><li>Lý do: khách báo AI đổi nhầm (K12)</li></ul>
+      <button id="handoffK12" class="primary" type="button">Gặp nhân viên</button>
+      <div id="handoffResultK12" aria-live="polite"></div>
+    </div>
+    <form id="freeMessageK12">
+      <label for="messageK12">Tin nhắn khác:</label>
+      <input id="messageK12" type="text" placeholder="Nhập nội dung">
+      <button type="submit">Gửi</button>
+    </form>
+    <div id="freeReplyK12" aria-live="polite"></div>
+  </section>
+</main>
+<script>
+const booking={code:"TRV-7Q2K",passengers:["Nguyễn Minh An","Nguyễn Gia Bình"],sourceTime:"15:00",flights:[{code:"BM 217",time:"12/11 · 21:00",seats:1},{code:"BM 201",time:"13/11 · 07:00",seats:9},{code:"BM 205",time:"13/11 · 09:30",seats:4}]};
+let held=booking.flights[1],seconds=1200,holdActive=true,bookingChanged=false,refundSubmitted=false;
+const $=id=>document.getElementById(id);
+function showScreen(name){const k3=name==="K3";$("screenK3").classList.toggle("hidden",!k3);$("screenK12").classList.toggle("hidden",k3);$("tabK3").classList.toggle("selected",k3);$("tabK12").classList.toggle("selected",!k3);$("tabK3").setAttribute("aria-selected",String(k3));$("tabK12").setAttribute("aria-selected",String(!k3));}
+function setHold(flight){if(bookingChanged||refundSubmitted)return;held=flight;seconds=1200;holdActive=true;$("timer").textContent="20:00";$("heldFlight").textContent="Đang giữ "+flight.code+" · "+flight.time;$("cardFlight").textContent=flight.code+" · "+flight.time;$("release").disabled=false;$("confirmChange").disabled=false;$("changeResult").textContent="";}
+function updateTimer(){if(!holdActive)return;if(seconds>0)seconds--;const m=String(Math.floor(seconds/60)).padStart(2,"0"),s=String(seconds%60).padStart(2,"0");$("timer").textContent=m+":"+s;if(seconds===0){holdActive=false;$("heldFlight").textContent="Đã nhả tự động · "+held.code;$("release").disabled=true;$("confirmChange").disabled=true;$("changeResult").textContent="Đã hết 20 phút, chỗ được nhả tự động. Vé gốc vẫn giữ nguyên; lần đổi miễn phí chưa dùng.";}}
+function handoff(target,details=""){target.insertAdjacentHTML("beforeend",details+"<p><b>Đã chuyển nhân viên.</b> Bản tóm tắt TRV-7Q2K đã được gửi; trợ lý chưa thực hiện thêm thay đổi nào.</p>");}
+$("tabK3").addEventListener("click",()=>showScreen("K3"));$("tabK12").addEventListener("click",()=>showScreen("K12"));
+$("release").addEventListener("click",()=>{holdActive=false;$("heldFlight").textContent="Đã nhả · "+held.code;$("timer").textContent="Đã nhả";$("release").disabled=true;$("confirmChange").disabled=true;$("changeResult").textContent="Đã nhả chỗ. Vé gốc vẫn giữ nguyên; bạn chưa dùng lần đổi miễn phí.";});
+$("otherFlight").addEventListener("click",()=>setHold(held.code==="BM 201"?booking.flights[2]:booking.flights[1]));
+$("confirmChange").addEventListener("click",()=>{if(!holdActive)return;bookingChanged=true;$("heldFlight").textContent="Đã đổi · "+held.code+" · "+held.time;$("timer").textContent="Đã dùng";$("changeResult").innerHTML="<p><b>Đã mô phỏng đổi vé thành công.</b> Cả Nguyễn Minh An và Nguyễn Gia Bình đã được đổi sang "+held.code+" · "+held.time+".</p>";$("confirmChange").disabled=true;$("release").disabled=true;$("otherFlight").disabled=true;holdActive=false;});
+document.querySelectorAll(".support").forEach(button=>button.addEventListener("click",()=>handoff($("changeResult"),"<div class='source'>Tóm tắt: "+booking.code+" · "+booking.passengers.join(", ")+" · khách muốn đổi sang sáng mai · "+(holdActive?"đang giữ "+held.code+" "+held.time+" (còn "+$("timer").textContent+")":"không còn giữ chỗ")+" · chưa đổi vé · lý do: cần nhân viên hỗ trợ.</div>")));
+$("understood").addEventListener("change",event=>{$("sendRefund").disabled=!event.target.checked;});
+$("sendRefund").addEventListener("click",()=>{if($("understood").checked){refundSubmitted=true;holdActive=false;$("heldFlight").textContent="Đã nhả · "+held.code;$("timer").textContent="Đã nhả";$("release").disabled=true;$("confirmChange").disabled=true;$("otherFlight").disabled=true;$("refundResult").textContent="Đã mô phỏng gửi yêu cầu hoàn. Yêu cầu không thể huỷ qua trợ lý; chỗ giữ tạm đã được nhả.";$("sendRefund").disabled=true;}});
+$("handoffK12").addEventListener("click",()=>handoff($("handoffResultK12")));
+$("freeMessage").addEventListener("submit",event=>{event.preventDefault();const text=$("messageK3").value.trim();if(!text)return;const safeText=text.replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));$("freeReply").innerHTML="<div class='warning'><b>Chưa có căn cứ hoặc công cụ phù hợp.</b> Mình chưa làm thay đổi nào. Yêu cầu của bạn: “"+safeText+"”</div>";handoff($("freeReply"),"<div class='source'>Tóm tắt chuyển nhân viên: "+booking.code+" · "+booking.passengers.join(", ")+" · chưa thực hiện yêu cầu ngoài kịch bản.</div>");});
+$("freeMessageK12").addEventListener("submit",event=>{event.preventDefault();const text=$("messageK12").value.trim();if(!text)return;$("freeReplyK12").innerHTML="<div class='source'>Tin nhắn bổ sung: "+text.replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]))+"</div>";handoff($("freeReplyK12"));});
+setInterval(updateTimer,1000);
+</script>
+</body>
+</html>
