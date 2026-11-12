@@ -36,22 +36,20 @@ Mỗi phần có **một người viết, một người đọc lại**. Ai cũn
 
 ### Bước 1 — Cả nhóm (15 phút)
 - [x] TRƯỜNG, THÀNH đọc `spec.md` §2 và §4. Chỗ nào không đồng ý thì sửa ngay.
-- [x] THÀNH xác nhận 2 kịch bản đắt nhất (**K3, K9**) và mức tự chủ trong §4: `tra_cuu_dat_cho` tự làm · `giu_cho_chuyen_moi` tự làm có điều kiện L2 · `doi_chuyen_bay` khách duyệt · `gui_yeu_cau_hoan_ve` khách duyệt có ma sát P2 · `chuyen_nhan_vien` tự làm.
-- [ ] TRƯỜNG xác nhận K3/K9 và mức tự chủ để hoàn tất xác nhận của cả nhóm.
-- [x] THÀNH tự xếp `gui_yeu_cau_hoan_ve` mức **P2** và điền cột của mình vào bảng bỏ phiếu §4.
-- [ ] TRƯỜNG tự xếp mức và điền cột của mình; nếu kết quả khác P2 thì VŨ sửa phần "nhóm chốt".
+- [x] Xác nhận 2 kịch bản đắt nhất (**K3, K9**) và mức tự chủ cho 5 tool: `tra_cuu_dat_cho` tự làm · `giu_cho_chuyen_moi` tự làm có điều kiện L2 · `doi_chuyen_bay` khách duyệt · `gui_yeu_cau_hoan_ve` khách duyệt có ma sát P2 · `chuyen_nhan_vien` tự làm.
+- [x] Mỗi người tự xếp mức cho `gui_yeu_cau_hoan_ve` (5 phút, không bàn), rồi **điền cột của mình** vào bảng bỏ phiếu §4. Cả Vũ, Trường và Thành đều chọn P2; không cần đổi phần "nhóm chốt".
 - [x] Điền họ tên đầy đủ của 3 thành viên vào đầu `spec.md`
-- [ ] Kiểm lại **mã học viên** của Trường (`2A2026034` chỉ có 9 ký tự, hai bạn kia có 11) — **phải đúng**
+- [x] Kiểm lại **mã học viên** của Trường: đã sửa thành `2A202603393` (11 ký tự)
 - [ ] Điền bàn/zone (hiện còn `____`)
 
 ### Bước 2 — TRƯỜNG: §3 (khoảng 45 phút)
 Làm cho **K3** và **K9**. Mỗi kịch bản ghi:
-- [ ] Câu AI nói **nguyên văn** · người dùng thấy gì ngoài câu chữ · làm gì tiếp · ai được báo, sau bao lâu
-- [ ] Quyết định hỏi lại / trả lời kèm giới hạn / chuyển người: chọn gì, **loại hai cách kia vì sao**
-- [ ] Loại lỗi: hệ thống / người dùng / ngữ cảnh; vì sao cách nói và cách sửa đi theo loại đó
-- [ ] 2–3 nguyên tắc HAX/PAIR, mỗi cái trỏ vào **một câu chữ cụ thể**
-- [ ] Một lỗi **sửa câu chữ không cứu được**: dùng K11 hoặc K12 ("đã huỷ", "đã đổi lại" khi không có tool). Thiết kế cứu: L5 chuyển nhân viên + nút chỉ hiện khi tool có thật
-- [ ] Nghĩ đủ 4 đường: happy path · low-confidence · không căn cứ · người dùng sửa AI
+- [x] Câu AI nói **nguyên văn** · người dùng thấy gì ngoài câu chữ · làm gì tiếp · ai được báo, sau bao lâu
+- [x] Quyết định hỏi lại / trả lời kèm giới hạn / chuyển người: chọn gì, **loại hai cách kia vì sao**
+- [x] Loại lỗi: hệ thống / người dùng / ngữ cảnh; vì sao cách nói và cách sửa đi theo loại đó
+- [x] 2–3 nguyên tắc HAX/PAIR, mỗi cái trỏ vào **một câu chữ cụ thể**
+- [x] Một lỗi **sửa câu chữ không cứu được**: dùng K11 hoặc K12 ("đã huỷ", "đã đổi lại" khi không có tool). Thiết kế cứu: L5 chuyển nhân viên + nút chỉ hiện khi tool có thật
+- [x] Nghĩ đủ 4 đường: happy path · low-confidence · không căn cứ · người dùng sửa AI
 
 **Bàn giao cho THÀNH:** câu chữ nguyên văn + nguyên tắc HAX/PAIR nào ở chỗ nào.
 
@@ -81,7 +79,7 @@ Làm cho **K3** và **K9**. Mỗi kịch bản ghi:
 **Trong lúc THÀNH dựng:** VŨ đọc lại prototype so với §4 (nút nào có, nút nào không) và viết sẵn 3 ca lạ để thử.
 
 ### Bước 4 — Hoàn thiện (khoảng 20 phút)
-- [ ] TRƯỜNG viết §6: 3 tiêu chí Pass/Fail mà người ngoài nhóm chấm ra cùng kết quả
+- [x] TRƯỜNG viết §6: 3 tiêu chí Pass/Fail mà người ngoài nhóm chấm ra cùng kết quả
 - [ ] VŨ chấm thử §6 trên K3 và K9, ghi lỗi còn lại
 - [x] THÀNH chụp ảnh đánh số, ghi §5
 
