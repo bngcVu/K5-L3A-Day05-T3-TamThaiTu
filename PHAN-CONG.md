@@ -66,14 +66,14 @@ Làm cho **K3** và **K9**. Mỗi kịch bản ghi:
 - Ảnh đánh số: số ①②③ viết thẳng vào HTML (thẻ `<sup>` hoặc `<b>`), rồi chụp màn hình trình duyệt. Không cần công cụ chỉnh ảnh.
 
 **Nội dung (1 file, 2 màn hình, chuyển bằng 2 tab chữ):**
-- [ ] **Màn 1 — K3:** tin "đổi giúp mình sang sáng mai" → AI giữ chỗ BM 201 (đếm ngược 20 phút, nút *Nhả chỗ* = tự làm có hoàn tác) → **thẻ xác nhận đổi** có tên từng hành khách, dòng "dùng lần đổi miễn phí duy nhất", nút *Xác nhận đổi · Xem chuyến khác · Gặp nhân viên* (cần duyệt). Có một dòng căn cứ: "Nguồn: dữ liệu đặt chỗ lúc 15:00".
-- [ ] **Màn 2 — ca khó của track (K12 hoặc K9):** K12 = khách nói đổi nhầm, AI nhận lỗi thật, **không có nút "đổi lại"**, chỉ có *Gặp nhân viên* kèm bản tóm tắt cho nhân viên. K9 = thẻ soạn sẵn hoàn với ô tick, nút *Gửi* khoá cho tới khi tick. Chọn **một** trong hai làm chính.
-- [ ] Thể hiện ≥2 mức tự chủ khác nhau; việc cấm (đổi tên, huỷ yêu cầu hoàn đã gửi) **không có nút**
-- [ ] Bấm qua từ đầu tới cuối không cần can thiệp tay
-- [ ] Ca lạ: một nút hoặc ô nhập tin tự do chạy ra phản hồi "chuyển nhân viên" khi tin không khớp kịch bản có sẵn
-- [ ] 1–2 ảnh đánh số trong `prototype/`; mỗi số ghi: thể hiện gì · nguyên tắc HAX/PAIR nào · mức tự chủ nào
-- [ ] Ghi §5: công cụ · phần nào mock · không gọi AI thật · **cách hiện đã chọn, cách khác đã nghĩ tới và vì sao loại** (ví dụ: chọn thẻ xác nhận trong khung chat; loại popup chặn toàn màn hình vì che mất căn cứ)
-- [ ] Prototype **không vi phạm 3 việc "KHÔNG làm"** ở §1 (không bồi thường, không đổi tên, không thanh toán)
+- [x] **Màn 1 — K3:** tin "đổi giúp mình sang sáng mai" → AI giữ chỗ BM 201 (đếm ngược 20 phút, nút *Nhả chỗ* = tự làm có hoàn tác) → **thẻ xác nhận đổi** có tên từng hành khách, dòng "dùng lần đổi miễn phí duy nhất", nút *Xác nhận đổi · Xem chuyến khác · Gặp nhân viên* (cần duyệt). Có một dòng căn cứ: "Nguồn: dữ liệu đặt chỗ lúc 15:00".
+- [x] **Màn 2 — K12:** khách nói đổi nhầm, AI nhận lỗi thật, **không có nút "đổi lại"**, chỉ có *Gặp nhân viên* kèm bản tóm tắt cho nhân viên.
+- [x] Thể hiện ≥2 mức tự chủ khác nhau; việc cấm (đổi tên, huỷ yêu cầu hoàn đã gửi) **không có nút**
+- [x] Bấm qua từ đầu tới cuối không cần can thiệp tay
+- [x] Ca lạ: ô nhập tin tự do chuyển nhân viên khi tin không khớp kịch bản có sẵn
+- [x] 2 ảnh đánh số trong `prototype/`; mỗi số ghi: thể hiện gì · nguyên tắc HAX/PAIR nào · mức tự chủ nào
+- [x] Ghi §5: công cụ · phần nào mock · không gọi AI thật · **cách hiện đã chọn, cách khác đã nghĩ tới và vì sao loại**
+- [x] Prototype **không vi phạm 3 việc "KHÔNG làm"** ở §1 (không bồi thường, không đổi tên, không thanh toán)
 - [ ] Kẹt kỹ thuật quá 20 phút thì **gọi TA**; không dựng được thì vẽ tay 2 màn hình rồi chụp
 
 **Trong lúc THÀNH dựng:** VŨ đọc lại prototype so với §4 (nút nào có, nút nào không) và viết sẵn 3 ca lạ để thử.
@@ -81,7 +81,7 @@ Làm cho **K3** và **K9**. Mỗi kịch bản ghi:
 ### Bước 4 — Hoàn thiện (khoảng 20 phút)
 - [ ] TRƯỜNG viết §6: 3 tiêu chí Pass/Fail mà người ngoài nhóm chấm ra cùng kết quả
 - [ ] VŨ chấm thử §6 trên K3 và K9, ghi lỗi còn lại
-- [ ] THÀNH chụp ảnh đánh số, ghi §5
+- [x] THÀNH chụp ảnh đánh số, ghi §5
 
 ### Bước 5 — Demo (30 phút) và nộp
 - [ ] Mỗi người nói một phần: THÀNH (lát cắt và bấm prototype) · VŨ (kịch bản và mức tự chủ, cái giá khi sai) · TRƯỜNG (AI nói gì khi sai)

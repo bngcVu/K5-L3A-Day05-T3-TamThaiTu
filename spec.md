@@ -8,7 +8,7 @@
 | Nguyễn Thế Trường | 2A2026034 | §3 Khi AI sai · §6 Tốt là gì · câu chữ AI trong prototype |
 | Tô Minh Thành | 2A202603439 | §5 Prototype · §7 Demo · repo và nộp bài |
 
-> Mã học viên phải đúng — đây là căn cứ đối chiếu điểm. Các phần ghi `[TRƯỜNG viết]`, `[THÀNH viết]` chưa có nội dung.
+
 
 ---
 
@@ -197,9 +197,17 @@ Cùng một model, lời hứa đổi theo mức:
 
 ## §5. Prototype
 
-**[THÀNH viết]**
+**File:** [`prototype/index.html`](prototype/index.html) · HTML/CSS/JavaScript thuần, mở trực tiếp bằng trình duyệt; không thư viện, CDN, backend, đăng nhập hay lời gọi AI thật. Dữ liệu dựng được khai báo trong một object JavaScript. Các hành động đổi vé/gửi hoàn là mô phỏng tại trình duyệt, không tác động đặt chỗ thật.
 
-*Gợi ý đầu vào từ §4:* màn hình cần có ít nhất ba thứ để khớp mức tự chủ: **thẻ giữ chỗ có đếm ngược 20 phút** (tự làm + hoàn tác bằng nút nhả), **thẻ xác nhận đổi** có tên từng hành khách (cần duyệt), **thẻ soạn sẵn hoàn** có ô tick (cần duyệt, ma sát cao) và nút *Gặp nhân viên* (chuyển người). Việc cấm (đổi tên, huỷ yêu cầu hoàn đã gửi) thì không có nút làm. Ca khó cho prototype: K11 hoặc K12 (track yêu cầu chọn ca khác ca "đổi sang sáng mai" của mẫu).
+**Hai màn hình/kịch bản, chuyển bằng tab:**
+
+- **Màn 1 — K3:** câu “đổi giúp mình sang sáng mai” dẫn tới thẻ giữ BM 201 cho cả hai hành khách. Đồng hồ 20 phút và nút *Nhả chỗ* thể hiện `giu_cho_chuyen_moi` tự làm, có thể hoàn tác; BM 217 bị loại vì chỉ còn một chỗ. Thẻ đổi ghi chuyến gốc, chuyến mới, tên từng hành khách và cảnh báo dùng lần đổi miễn phí; chỉ nút *Xác nhận đổi* mới mô phỏng gọi `doi_chuyen_bay`. *Xem chuyến khác* đổi chỗ giữ sang BM 205, còn *Gặp nhân viên* chuyển kèm tóm tắt.
+- Cũng trong màn 1, phần *Muốn hoàn tiền thay vì đổi?* là thẻ `soan_yeu_cau_hoan_ve`: nêu người được hoàn, phương thức nhận, thời hạn tới 90 ngày, việc gửi không huỷ được và lựa chọn đổi miễn phí. Nút *Gửi yêu cầu hoàn* bị khoá đến khi khách tick đã hiểu rủi ro; đây là mô phỏng bước duyệt riêng, không tự gửi theo câu chữ.
+- **Màn 2 — K12:** mô phỏng trạng thái AI đã đổi nhầm sang BM 205. Trợ lý nhận lỗi, nói lần đổi đã dùng và không có công cụ hoàn tác; không có nút *Đổi lại*. *Gặp nhân viên* gửi bản tóm tắt gồm mã đặt chỗ, hành khách, thao tác đã làm/chưa làm và lý do chuyển (L5). Tin nhắn ngoài luồng ở cả hai màn chuyển nhân viên thay vì tự đoán hoặc thao tác.
+
+**Ảnh đánh số:** [① Màn K3](prototype/01-K3.png) — căn cứ, giờ tra cứu, số chỗ và thẻ giữ/duyệt; PAIR Explainability + Trust, G11; giữ chỗ tự làm có hoàn tác, đổi vé cần khách duyệt. [② Màn K12](prototype/02-K12.png) — lời nhận lỗi và bản tóm tắt chuyển người; Errors + Graceful Failure, G10; chuyển nhân viên tự làm theo L5, không giả vờ hoàn tác được.
+
+**Quyết định giao diện:** chọn thẻ xác nhận ngay trong hội thoại để khách thấy căn cứ, hành khách, hậu quả và lựa chọn cùng lúc; không dùng popup toàn màn hình vì sẽ che căn cứ và ngữ cảnh. Chọn giữ một chuyến đủ chỗ thay vì giữ nhiều chuyến vì L2 giới hạn một giữ chỗ cùng lúc. Không thêm nút đổi tên hoặc đổi lại vì các việc đó không có tool. Mô phỏng hoàn tiền nằm trong phần mở rộng của màn K3 để giữ đúng hai màn hình/kịch bản và không biến lời “hoàn tiền” thành thao tác gửi ngay.
 
 ---
 
@@ -211,4 +219,6 @@ Cùng một model, lời hứa đổi theo mức:
 
 ## §7. Demo
 
-**[THÀNH viết, điền sau khi demo]**
+**Kịch bản demo đề xuất (chưa phải kết quả demo thực tế):** THÀNH giới thiệu lát cắt trong 30 giây, mở K3, chỉ căn cứ ①, bấm *Xác nhận đổi* để minh hoạ ranh giới giữa giữ chỗ có thể nhả và đổi vé cần duyệt. Sau đó mở K12, chỉ ra không có nút *Đổi lại*, bấm *Gặp nhân viên* và đọc phần tóm tắt. Ca lạ dự phòng: “đổi tên vé giúp mình” — nhập ở ô *Ca lạ?*; prototype không thao tác đổi tên và chuyển nhân viên.
+
+**Sau demo thật cần điền:** ca lạ TA/nhóm bạn đưa ra: ______ · prototype/nhóm đã xử lý: ______ · nhóm có đổi ý gì không, bằng chứng: ______.
