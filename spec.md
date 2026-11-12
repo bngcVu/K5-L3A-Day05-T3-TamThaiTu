@@ -145,11 +145,11 @@ Nhãn mức hại: **nhẹ** (khách tự thấy, tự sửa) · **sửa đượ
 > "Mình xin lỗi, yêu cầu hoàn vé đã gửi thì mình **không có chức năng huỷ**, và mình không muốn hứa điều mình không làm được. Mình đang chuyển bạn cho nhân viên hỗ trợ ngay, kèm toàn bộ thông tin (TRV-7Q2K, yêu cầu hoàn đã gửi lúc nào, bạn muốn đổi sang chuyến sáng mai) để bạn không phải kể lại. Mình **chưa biết** nhân viên có gỡ được hay không. Trong lúc chờ, mình có thể giữ chỗ BM 201 cho 2 người trong 20 phút nếu bạn muốn."
 
 **AI nói (nguyên văn, K12):**
-> "Bạn nói đúng — mình đã đổi sang BM 205 khi chưa có xác nhận. Mình xin lỗi. Lần đổi miễn phí đã được dùng và mình không có công cụ đổi lại, nên mình sẽ không nói là đã đổi lại hay tự thực hiện thêm thay đổi. Mình đang chuyển bạn tới nhân viên để hỗ trợ."
+> "Mình đã đổi sang BM 205 · 13/11 · 09:30 và lần đổi miễn phí đã được dùng. Mình xin lỗi vì chuyến này không đúng ý bạn. Mình không có công cụ đổi lại, nên mình sẽ không nói là đã đổi lại hay tự thực hiện thêm thay đổi. Mình đang chuyển bạn tới nhân viên để hỗ trợ."
 
 *(Chép đúng nguyên văn từ `prototype/index.html`, màn K12. Bản tóm tắt gửi nhân viên có mã TRV-7Q2K, hai hành khách, việc AI đã làm/chưa làm và lý do, để khách không phải kể lại từ đầu.)*
 
-**Loại lỗi:** K11 là lỗi người dùng/ngữ cảnh → không trách, nói thật việc không làm được. K12 là lỗi hệ thống → xin lỗi thẳng và nhận lỗi. Cả hai đều chuyển nhân viên **ngay**, không "thử" một lần nữa.
+**Loại lỗi:** K11 là lỗi người dùng/ngữ cảnh → không trách, nói thật việc không làm được. K12 chưa biết nguyên nhân (cổng L1 lỗi, hoặc khách bấm nhầm *Xác nhận đổi* trên thẻ BM 205) nên câu nói **chỉ nêu việc đã xảy ra và xin lỗi vì kết quả không đúng ý khách, không quy lỗi cho ai**; nguyên nhân thật do nhân viên đọc log. Cả hai đều chuyển nhân viên **ngay**, không "thử" một lần nữa.
 
 ### Bốn đường, cho K3 và K9
 
@@ -323,7 +323,7 @@ Ba tiêu chí, người ngoài nhóm chỉ cần nhìn log tool và màn hình l
 - **K11 và K12 chưa chấm bằng ba tiêu chí này:** chúng được xử lý bằng L5 (chuyển nhân viên), nên chưa có tiêu chí Pass/Fail riêng cho chất lượng gói tóm tắt gửi nhân viên.
 
 **Kiểm chéo của Vũ** (đối chiếu §6 và §3 với `prototype/index.html` và hai ảnh; kết quả chấm lại trùng với bảng trên: K3 đạt T1 và T3, K9 đạt T1, T2, T3). Ba chỗ lệch, ghi để không giấu:
-- **Câu K12 nói "khi chưa có xác nhận" mâu thuẫn với L1.** Theo L1, `doi_chuyen_bay` chỉ chạy sau nút bấm trên thẻ. Nếu khách bấm nhầm *Xác nhận đổi* trên thẻ BM 205 (sau *Xem chuyến khác*) thì câu này nói sai sự thật và đổ lỗi cho AI. Câu đúng cho ca này phải dựa vào log: "đổi sang BM 205 theo thao tác xác nhận lúc ..., bạn nói không phải chuyến bạn muốn". Câu trong prototype chỉ đúng khi cổng L1 bị lỗi hệ thống. Chưa sửa vì đổi câu thì phải sửa cả prototype lẫn ảnh ②.
+- **Câu K12 nói "khi chưa có xác nhận" mâu thuẫn với L1.** Theo L1, `doi_chuyen_bay` chỉ chạy sau nút bấm trên thẻ. Nếu khách bấm nhầm *Xác nhận đổi* trên thẻ BM 205 (sau *Xem chuyến khác*) thì câu này nói sai sự thật và đổ lỗi cho AI. Câu đúng cho ca này phải dựa vào log: "đổi sang BM 205 theo thao tác xác nhận lúc ..., bạn nói không phải chuyến bạn muốn". Câu trong prototype chỉ đúng khi cổng L1 bị lỗi hệ thống. **Đã xử lý (Trường):** câu K12 trong §3 và `prototype/index.html` đã đổi thành câu không quy lỗi cho ai ("Mình đã đổi sang BM 205 … Mình xin lỗi vì chuyến này không đúng ý bạn …"). **Ảnh ② (`prototype/02-K12.png`) vẫn là câu cũ, cần THÀNH chụp lại.**
 - **Thẻ hoàn không có trong ảnh.** Thẻ `soạn sẵn` (K9) nằm trong mục thu gọn "Muốn hoàn tiền thay vì đổi?" nên cả hai ảnh không chụp tới. Người chấm phải mở prototype để thấy ô tick và nút Gửi bị khoá.
 - **Prototype không chặn hoàn sau khi đã đổi.** Sau khi bấm *Xác nhận đổi*, thẻ hoàn vẫn gửi được, trong khi thực tế vé đã đổi thì không còn hoàn toàn bộ như cũ. Với mô phỏng thì chấp nhận được.
 
