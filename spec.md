@@ -1,6 +1,6 @@
 # Bài nộp LAB5 — T3 Du lịch · Nhóm TamThaiTu
 
-**Lớp:** L3A · **Bàn / zone:** ____ · **Track:** T3 Du lịch
+**Lớp:** L3A · **Bàn / zone:** A7 · **Track:** T3 Du lịch
 
 | Họ và Tên | Mã Học Viên | Việc đã làm |
 |---|---|---|
