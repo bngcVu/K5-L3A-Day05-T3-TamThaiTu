@@ -75,11 +75,12 @@ Nhãn mức hại: **nhẹ** (khách tự thấy, tự sửa) · **sửa đượ
 **Cái AI đã làm trước khi nói:** `tra_cuu_dat_cho` (thấy BM 213 đã huỷ, "sáng mai" ra hai chuyến, hai hành khách) → `giu_cho_chuyen_moi` BM 201 cho 2 người (9 chỗ ≥ 2, luật L2). **Chưa gọi `doi_chuyen_bay`.**
 
 **AI nói (nguyên văn):**
-> "Mình rất tiếc, chuyến BM 213 lúc 19:00 hôm nay đã bị huỷ do bão. 'Sáng mai' đang có **2 chuyến** còn chỗ cho cả hai mẹ con: **BM 201 lúc 07:00** (còn 9 chỗ) và **BM 205 lúc 09:30** (còn 4 chỗ). Mình chưa chắc bạn muốn chuyến nào, nên mình mới **giữ chỗ BM 201 cho Nguyễn Minh An và Nguyễn Gia Bình trong 20 phút** (tới 15:20). Giữ chỗ **chưa phải là đổi vé**, bạn chưa mất gì. Đổi vé sẽ dùng **lần đổi miễn phí duy nhất**, nên bạn xem thẻ bên dưới rồi tự bấm xác nhận nhé. Số liệu lấy lúc 15:00."
+> "Mình tìm thấy hai chuyến sáng mai. Mình đã giữ BM 201 lúc 07:00 cho cả hai người; BM 205 lúc 09:30 cũng còn đủ chỗ. Mình chưa đổi vé. Bạn có thể nhả chỗ bất cứ lúc nào."
+
+*(Câu này chép đúng nguyên văn từ `prototype/index.html`, màn K3.)*
 
 **Người dùng thấy gì ngoài câu chữ**
-- **Nhãn độ chắc** trên đề xuất: "Bạn nói 'sáng mai' nhưng có 2 chuyến. Mình chưa chắc bạn muốn chuyến nào."
-- **Thẻ căn cứ:** BM 213 19:00 *ĐÃ HUỶ do thời tiết* · chính sách Bay Mẫu "đổi miễn phí một lần trong 48 giờ hoặc hoàn toàn bộ" · số chỗ còn của BM 201 / BM 205 · giờ tra cứu 15:00.
+- **① Căn cứ** (thẻ ngay dưới câu trả lời): "Tra cứu lúc 15:00, 12/11/2026. BM 201 còn 9 chỗ; BM 205 còn 4 chỗ; đặt chỗ có 2 hành khách. Chuyến BM 217 còn 1 chỗ nên không đủ cho cả hai."
 - **Thẻ xác nhận đổi (§4):** BM 213 12/11 19:00 (đã huỷ) → **BM 201** 13/11 07:00 · tên từng hành khách (Nguyễn Minh An, Nguyễn Gia Bình) · dòng "Dùng lần đổi miễn phí duy nhất; đổi lại sẽ mất" · **đếm ngược giữ chỗ**.
 - Ba nút: **[Xác nhận đổi] · [Xem chuyến khác (BM 205)] · [Gặp nhân viên]**. Có nút **[Nhả chỗ]** cho giữ chỗ.
 
@@ -101,13 +102,15 @@ Nhãn mức hại: **nhẹ** (khách tự thấy, tự sửa) · **sửa đượ
 **Cái AI đã làm trước khi nói:** `tra_cuu_dat_cho` → `soan_yeu_cau_hoan_ve` (chỉ tạo thẻ soạn sẵn). **Chưa gọi `gui_yeu_cau_hoan_ve`.**
 
 **AI nói (nguyên văn):**
-> "Mình hiểu bạn đang rất bực vì chuyến bị huỷ. Mình **chưa gửi gì cả**. Mình đã soạn sẵn yêu cầu hoàn vé TRV-7Q2K để bạn xem: hoàn cho **cả Nguyễn Minh An và Nguyễn Gia Bình**; tiền về **phương thức thanh toán ban đầu**; xử lý có thể **tới 90 ngày**. **Gửi rồi sẽ KHÔNG huỷ được**, và sau khi gửi bạn **không đổi chuyến miễn phí được nữa**. Chuyến huỷ do bão nên hãng **không bồi thường tiền mặt**. Mình không thấy số tiền hoàn trong đặt chỗ này nên không nêu con số. Bạn vẫn còn lựa chọn **đổi miễn phí trong 48 giờ**: BM 201 lúc 07:00 (còn 9 chỗ) hoặc BM 205 lúc 09:30 (còn 4 chỗ). Nếu bạn chắc chắn muốn hoàn, hãy tick ô xác nhận rồi bấm Gửi. Nếu chỉ hoàn cho một người, bạn nói mình sửa nhé."
+> **THẺ SOẠN SẴN · chưa gửi yêu cầu.** "Hoàn cho Nguyễn Minh An và Nguyễn Gia Bình về phương thức thanh toán gốc. Thời gian xử lý có thể tới 90 ngày. **Gửi rồi KHÔNG huỷ được** và bạn không đổi chuyến miễn phí được nữa. Bạn vẫn có thể đổi miễn phí sang chuyến đủ chỗ."
+
+*(Prototype hiển thị K9 bằng thẻ này, nằm trong mục "Muốn hoàn tiền thay vì đổi?" của màn K3, chứ không có bong bóng chat riêng. Câu chữ chép đúng nguyên văn từ `prototype/index.html`.)*
 
 **Người dùng thấy gì ngoài câu chữ**
-- **Thẻ soạn sẵn hoàn (§4)** ghi: hoàn cho ai · tiền về đâu · tới 90 ngày · dòng đậm **"Gửi rồi KHÔNG huỷ được"** · "Sau khi gửi, bạn không đổi chuyến miễn phí được nữa".
-- **Lựa chọn song song** cạnh thẻ: [Đổi miễn phí sang BM 201]. Không ép, chỉ đặt cạnh nhau.
-- **Ô tick** "Tôi hiểu gửi rồi không huỷ được". **Nút [Gửi yêu cầu hoàn] bị khoá tới khi tick.** Nút [Gặp nhân viên] luôn sáng.
-- **Thẻ căn cứ:** trích dòng chính sách "đổi miễn phí một lần trong 48 giờ hoặc hoàn toàn bộ; huỷ do thời tiết không bồi thường tiền mặt".
+- **Thẻ soạn sẵn hoàn (§4)** ghi: hoàn cho ai · tiền về đâu · tới 90 ngày · dòng đậm **"Gửi rồi KHÔNG huỷ được"** · "không đổi chuyến miễn phí được nữa".
+- **Lựa chọn đổi miễn phí** nằm ngay trong câu của thẻ ("Bạn vẫn có thể đổi miễn phí sang chuyến đủ chỗ"), đặt cạnh việc hoàn chứ không ép.
+- **Ô tick** "Tôi hiểu gửi rồi không huỷ được." **Nút [Gửi yêu cầu hoàn] bị khoá tới khi tick.** Nút [Gặp nhân viên] của màn K3 vẫn dùng được.
+- **Căn cứ ①** ở màn K3 (giờ tra cứu, số chỗ, số hành khách) nằm phía trên thẻ này.
 
 **Khách làm gì tiếp:** (a) tick rồi Gửi; (b) bấm đổi miễn phí; (c) sửa phạm vi ("chỉ hoàn cho mình"); (d) gặp nhân viên; (e) không làm gì thì **không có gì được gửi**, thẻ treo không mất gì vì hoàn tiền không cạnh tranh chỗ ngồi (§4).
 
@@ -120,15 +123,14 @@ Nhãn mức hại: **nhẹ** (khách tự thấy, tự sửa) · **sửa đượ
 | Trả lời kèm giới hạn ("mình đã gửi hoàn, lưu ý không huỷ được") | Loại | Lời cảnh báo đến **sau** khi gửi thì vô nghĩa; `gui_yeu_cau_hoan_ve` không đảo được, tới 90 ngày |
 | Dừng và chuyển người | Loại (đúng P3 ở §4) | Hoàn vé là quyền của khách, không ngoài thẩm quyền; người chỉ muốn lấy lại tiền mà phải chờ nhân viên giữa lúc bão thì giận và bỏ đi. Nhân viên cũng không biết khách muốn hoàn hơn chính khách |
 
-**Loại lỗi: người dùng + ngữ cảnh** (khách bực, nói gộp, "hết" mơ hồ; không phải AI hỏng). Cách nói: **đồng cảm trước, không trách, không dạy khôn**, đưa thông tin để khách tự quyết. Cách sửa: thẻ cho khách **sửa phạm vi**, không bắt khách gõ lại.
+**Loại lỗi: người dùng + ngữ cảnh** (khách bực, nói gộp, "hết" mơ hồ; không phải AI hỏng). Cách nói: **trung tính, không trách, không dạy khôn**, chỉ nêu hậu quả và lựa chọn để khách tự quyết (thẻ không có câu xin lỗi vì AI không sai). Cách sửa: thẻ cho khách **sửa phạm vi**, không bắt khách gõ lại.
 
 ### Nguyên tắc HAX/PAIR và chỗ cụ thể
 
 | Nguyên tắc | Chỗ trỏ vào |
 |---|---|
-| **G2 — Làm rõ AI đúng tới đâu** | Nhãn "Bạn nói 'sáng mai' nhưng có 2 chuyến. Mình chưa chắc bạn muốn chuyến nào" trên thẻ đề xuất K3, và câu "Số liệu lấy lúc 15:00" |
-| **G10 — Thu nhỏ dịch vụ khi không chắc** | Câu "Mình **chưa gửi gì cả**" và ô tick khoá nút Gửi ở thẻ K9: AI dừng ở *soạn*, không đi tới *gửi* |
-| **G11 — Làm rõ vì sao AI làm vậy** (cũng là PAIR Explainability + Trust) | **Thẻ căn cứ** ở cả hai ca: dòng chính sách Bay Mẫu và dữ liệu `tra_cuu_dat_cho`; dòng "hãng không bồi thường tiền mặt" nói rõ giới hạn thay vì hứa |
+| **G10 — Thu nhỏ dịch vụ khi không chắc** (cũng là PAIR Errors + Graceful Failure) | Câu "**Mình chưa đổi vé**" ở K3; nhãn "**THẺ SOẠN SẴN · chưa gửi yêu cầu**" cùng ô tick khoá nút Gửi ở K9 (AI dừng ở *soạn*, không đi tới *gửi*); và câu "mình **không có công cụ đổi lại**, nên mình sẽ không nói là đã đổi lại" ở K12 (ảnh ②) |
+| **G11 — Làm rõ vì sao AI làm vậy** (cũng là PAIR Explainability + Trust) | **① Căn cứ** ở màn K3 (ảnh ①): giờ tra cứu 15:00, số chỗ BM 201 / BM 205 / BM 217, số hành khách; giải thích vì sao BM 217 bị loại ("còn 1 chỗ nên không đủ cho cả hai") |
 
 ### Lỗi sửa câu chữ không cứu được: K11 và K12
 
@@ -139,11 +141,13 @@ Nhãn mức hại: **nhẹ** (khách tự thấy, tự sửa) · **sửa đượ
 2. **Không có tool, không có câu**: vì AI không có tool huỷ hoàn hay đổi lại, mọi câu trả lời cho K11, K12 đi theo một mẫu duy nhất: nói thật + chuyển nhân viên (L5).
 3. **Chuyển người bắt buộc, kèm gói tóm tắt**, giữ chỗ đang chạy vẫn đếm ngược.
 
-**AI nói (nguyên văn, K11):**
+**AI nói (nguyên văn, K11; *chưa có màn riêng trên prototype, K11 chỉ xử lý bằng cùng mẫu chuyển nhân viên như K12*):**
 > "Mình xin lỗi, yêu cầu hoàn vé đã gửi thì mình **không có chức năng huỷ**, và mình không muốn hứa điều mình không làm được. Mình đang chuyển bạn cho nhân viên hỗ trợ ngay, kèm toàn bộ thông tin (TRV-7Q2K, yêu cầu hoàn đã gửi lúc nào, bạn muốn đổi sang chuyến sáng mai) để bạn không phải kể lại. Mình **chưa biết** nhân viên có gỡ được hay không. Trong lúc chờ, mình có thể giữ chỗ BM 201 cho 2 người trong 20 phút nếu bạn muốn."
 
 **AI nói (nguyên văn, K12):**
-> "Xin lỗi bạn, mình đã đổi sang BM 205 lúc 09:30 mà chưa hỏi lại cho rõ, đó là lỗi của mình. Lần đổi miễn phí đã được dùng, mình **không thể tự đổi lại**. Mình đang chuyển bạn cho nhân viên hỗ trợ, đã ghi sẵn là bạn muốn BM 201 lúc 07:00 (còn 9 chỗ). Bạn không phải kể lại từ đầu."
+> "Bạn nói đúng — mình đã đổi sang BM 205 khi chưa có xác nhận. Mình xin lỗi. Lần đổi miễn phí đã được dùng và mình không có công cụ đổi lại, nên mình sẽ không nói là đã đổi lại hay tự thực hiện thêm thay đổi. Mình đang chuyển bạn tới nhân viên để hỗ trợ."
+
+*(Chép đúng nguyên văn từ `prototype/index.html`, màn K12. Bản tóm tắt gửi nhân viên có mã TRV-7Q2K, hai hành khách, việc AI đã làm/chưa làm và lý do, để khách không phải kể lại từ đầu.)*
 
 **Loại lỗi:** K11 là lỗi người dùng/ngữ cảnh → không trách, nói thật việc không làm được. K12 là lỗi hệ thống → xin lỗi thẳng và nhận lỗi. Cả hai đều chuyển nhân viên **ngay**, không "thử" một lần nữa.
 
@@ -310,7 +314,7 @@ Ba tiêu chí, người ngoài nhóm chỉ cần nhìn log tool và màn hình l
 |---|---|---|
 | T1 | **Đạt**: `doi_chuyen_bay` chỉ chạy sau nút Xác nhận đổi (L1, L3) | **Đạt**: AI chỉ gọi `soan_yeu_cau_hoan_ve`; `gui_yeu_cau_hoan_ve` sau tick + nút Gửi (L4) |
 | T2 | Không áp dụng | **Đạt**: 4 ý nằm trong thẻ soạn sẵn; nút Gửi khoá tới khi tick |
-| T3 | **Đạt**: BM 201, BM 205, số chỗ, 15:00 đều lấy từ dữ liệu | **Đạt**: nói "hãng không bồi thường tiền mặt", không nêu số tiền vì dữ liệu không có |
+| T3 | **Đạt**: BM 201, BM 205, số chỗ, 15:00 đều lấy từ dữ liệu | **Đạt**: thẻ không hứa bồi thường và không nêu số tiền vì dữ liệu không có |
 
 **Lỗi còn lại (không giấu):**
 - **Tick theo phản xạ:** khách đang bực vẫn có thể tick mà không đọc. Hiện chưa có độ trễ bắt buộc hay câu hỏi kiểm tra đã hiểu. Giảm được nhưng chưa chặn hết.
